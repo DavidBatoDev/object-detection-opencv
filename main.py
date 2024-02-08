@@ -60,31 +60,5 @@ while True:  # Loop through the video
             2,
         )  # Put the class name on the image
 
-    # if len(class_ids) != 0:  # If there are objects in the image
-    #     for class_id, confidence, box in zip(
-    #         class_ids.flatten(), confs.flatten(), bbox
-    #     ):  # Loop through the detected objects
-    #         cv2.rectangle(
-    #             img, box, (255, 0, 0), thickness=2
-    #         )  # Draw a rectangle around the object
-    #         cv2.putText(
-    #             img,
-    #             class_name[class_id - 1].upper(),
-    #             (box[0] + 10, box[1] + 30),
-    #             cv2.FONT_HERSHEY_COMPLEX,
-    #             2,
-    #             (255, 0, 0),
-    #             2,
-    #         )  # Put the class name on the image
-    #         cv2.putText(
-    #             img,
-    #             str(round(confidence * 100, 2)),
-    #             (box[0] + 200, box[1] + 30),
-    #             cv2.FONT_HERSHEY_COMPLEX,
-    #             2,
-    #             (255, 0, 0),
-    #             2,
-    #         )  # Put the confidence on the image
-
     cv2.imshow("Output", img)  # Display the image
     cv2.waitKey(1)  # Wait for a key press
