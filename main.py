@@ -48,15 +48,15 @@ while True:  # Loop through the video
         box = bbox[i]
         x, y, w, h = box[0], box[1], box[2], box[3]
         cv2.rectangle(
-            img, (x, y), (x + w, h + y), color=(255, 0, 0), thickness=2
+            img, (x, y), (x + w, h + y), color=(0, 255, 0), thickness=2
         )  # Draw a rectangle around the object
         cv2.putText(
             img,
             class_name[class_ids[i] - 1].upper(),
-            (box[0] + 10, box[1] + 30),
+            (box[0] + 10, box[1] + 50),
             cv2.FONT_HERSHEY_COMPLEX,
             2,
-            (255, 0, 0),
+            (0, 255, 0),
             2,
         )  # Put the class name on the image
 
