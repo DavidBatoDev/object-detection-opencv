@@ -1,8 +1,6 @@
 import cv2
 
-# img = cv2.imread("lena.png")  # Load an image
 cap = cv2.VideoCapture(0)  # Load a video
-
 cap.set(3, 640)  # Set the width
 cap.set(4, 480)  # Set the height
 cap.set(10, 100)  # Set the brightness
@@ -30,8 +28,12 @@ while True:  # Loop through the video
     class_ids, confs, bbox = net.detect(
         img, confThreshold=0.5
     )  # Detect objects in the image
-    print(class_ids, bbox)
+    bbox = list(bbox)  # Convert the bounding box to a list
+    confs = list(confs.reshape(1, -1)[0])  # Convert the confidence to a list and reshape it
+    confs = list(map(float, confs))  # Convert the confidence to a float
 
+    # nmsthreshold=0.4, confThreshold=0.5 Setting the non-maximum suppression threshold and the confidence threshold
+    # pagmasmababa ang confThreshold, mas maraming objects ang ma-detect
     indices = cv2.dnn.NMSBoxes(bbox, confs, 0.5, 0.4)  # Apply non-maximum suppression
 
     if len(class_ids) != 0:  # If there are objects in the image
