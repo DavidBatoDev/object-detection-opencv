@@ -1,6 +1,4 @@
-link of the project:
+Tried using opencv-Library in Python
 
-https://youtu.be/diWDgKcH3E0?si=EO81ql8jdXQNyiaH
-
-Credits to Murtaza's Workshop - Robotics and AI 
+Credits to Murtaza's Workshop - Robotics and AI for the AI model used in this project
 ---Object Detection OpenCV
