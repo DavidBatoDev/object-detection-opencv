@@ -4,4 +4,4 @@ Credits to Murtaza's Workshop - Robotics and AI for the AI model used in this pr
 ---Object Detection OpenCV
 
 Demo Vid:
-https://studio.youtube.com/video/RgHvVXvja6I/edit
+https://www.youtube.com/watch?v=RgHvVXvja6I
